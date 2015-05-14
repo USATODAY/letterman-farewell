@@ -1,0 +1,45 @@
+      <div class="card card-detail">
+      
+
+        <% if (content.brightcove_id) { %>
+        
+        <!-- Start of Brightcove Player -->
+
+        <div style="display:none">
+        Interactives video player with single clip 
+        </div>
+
+
+        <object id="myExperience<%=content.brightcove_id%>" class="BrightcoveExperience">
+          <param name="bgcolor" value="#FFFFFF" />
+          <param name="width" value="<%= vidSize.width %>" />
+          <param name="height" value="<%= vidSize.height %>" />
+          <param name="playerID" value="4191673832001" />
+          <param name="playerKey" value="AQ~~,AAAABvaL8JE~,ufBHq_I6Fnz1-5Tv-uC_zxqKqCr-Phqa" />
+          <param name="isSlim" value="true" />
+          <param name="dynamicStreaming" value="true" />
+            
+          <param name="@videoPlayer" value="<%=content.brightcove_id%>" />
+          <param name="wmode" value="opaque" />
+          <param name="autoStart" value="false" />
+        </object>
+
+
+        <!-- End of Brightcove Player -->
+        <% } %>
+      
+        <div class="close-card"></div>
+      
+      
+      
+        <div class="iapp-detail-info">
+            <h2 class="card-back-header"><%= content.person_name %> </h2>
+            <p class="iapp-summary"><%= content.photo_caption %></p>
+            <p class="iapp-card-back-photo-credit"><%=content.photo_credit%></p>
+        </div>
+      
+      
+      </div>
+      
+        <div class="iapp-detail-bg"></div> 
+
