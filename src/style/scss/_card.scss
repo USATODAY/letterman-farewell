@@ -101,7 +101,8 @@
 }
 
 .close-card {
-  background-image: url('http://www.gannett-cdn.com/experiments/usatoday/2015/02/red-carpet/img/close-icon.svg');
+  background-image: url('http://www.gannett-cdn.com/experiments/usatoday/2015/05/letterman/img/close-icon-grey.svg');
+  background-repeat: no-repeat;
   cursor: pointer;
   height: 40px;
   position: absolute;
@@ -302,4 +303,12 @@
 .iapp-card-back-photo-credit {
   color: $medium-grey;
   font-size: 0.8em;
+}
+
+.iapp-detail-quote-wrap {
+    padding: 2em;
+}
+
+.iapp-detail-quote {
+    font-size: 1.5em;
 }

@@ -6,7 +6,7 @@ this["templates"]["app-view.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div class="iapp-project-info-wrap">\n    <h1 class="iapp-page-header">Dress like a star: Build your Ultimate Oscar closet</h1>\n    <p class="iapp-page-chatter">Love it or leave it? That’s for you to decide as you “shop” 100 memorable Oscar gowns and create your look book of favs…and, ahem, fails. Sort your closet using the tags at the right and say yay or nay to each look using the icons on the photos.</p>\n\n    <p class="iapp-share-chatter">Your friend\'s choices are below. Press reset to select your favorites.</p>\n    <div class="iapp-share-wrap"></div>\n</div>\n<div class="iapp-menu"></div>\n<div id="card-wrap" class="iapp-card-wrap"></div>\n\n<div class="iapp-intro-wrap">\n    <div class="iapp-intro-content-wrap">\n        <div class="iapp-intro-icon-wrap">\n            <div class="iapp-intro-icon"><img src="http://www.gannett-cdn.com/experiments/usatoday/2015/02/red-carpet/img/like.svg" alt=""></div>\n            <div class="iapp-intro-icon"><img src="http://www.gannett-cdn.com/experiments/usatoday/2015/02/red-carpet/img/dislike.svg" alt=""></div>\n        </div> <!-- end iapp-intro-icon-wrap -->\n        <div class="iapp-intro-info">\n            <h2 class="iapp-intro-header">Welcome to your oscar closet</h2>\n            <p class="iapp-intro-chatter">Sort your closet using the sort button below and say yay or nay to each look using the icons on the photos. When you’ve selected 10 in each category then you’ll have a shareable look book to send out via twitter, FB, and email.</p>\n            <div class="iapp-button iapp-begin-button iapp-clickable"><div class="iapp-button-text">Begin</div></div>\n        </div> <!-- end iapp-intro-info -->\n    </div> <!-- end iapp-intro-content-wrap -->\n</div> <!-- end iapp-intro-wrap -->\n\n<div class="iapp-end-modal-wrap"></div>\n\n';
+__p += '<div class="iapp-project-info-wrap">\n    <h1 class="iapp-page-header">And now, from the home office in Wahoo, Nebraska, David Letterman says, see ya later</h1>\n    <p class="iapp-page-chatter">During his 33 years hosting the Late Show on CBS, the weatherman from Indianapolis has shot the breeze with Bill Murray, Barack Obama and Bruce Willis. Here\'s how his guests, and in some cases friends, remember him.</p>\n\n    <p class="iapp-share-chatter">Your friend\'s choices are below. Press reset to select your favorites.</p>\n    <div class="iapp-share-wrap"></div>\n</div>\n<div class="iapp-menu"></div>\n<div id="card-wrap" class="iapp-card-wrap"></div>\n\n<div class="iapp-intro-wrap">\n    <div class="iapp-intro-content-wrap">\n        <div class="iapp-intro-icon-wrap">\n            <div class="iapp-intro-icon"><img src="http://www.gannett-cdn.com/experiments/usatoday/2015/02/red-carpet/img/like.svg" alt=""></div>\n            <div class="iapp-intro-icon"><img src="http://www.gannett-cdn.com/experiments/usatoday/2015/02/red-carpet/img/dislike.svg" alt=""></div>\n        </div> <!-- end iapp-intro-icon-wrap -->\n        <div class="iapp-intro-info">\n            <h2 class="iapp-intro-header">And now, from the home office in Wahoo, Nebraska, David Letterman says, see ya later</h2>\n            <p class="iapp-intro-chatter">During his 33 years hosting the Late Show on CBS, the weatherman from Indianapolis has shot the breeze with Bill Murray, Barack Obama and Bruce Willis. Here\'s how his guests, and in some cases friends, remember him.</p>\n            <div class="iapp-button iapp-begin-button iapp-clickable"><div class="iapp-button-text">Begin</div></div>\n        </div> <!-- end iapp-intro-info -->\n    </div> <!-- end iapp-intro-content-wrap -->\n</div> <!-- end iapp-intro-wrap -->\n\n<div class="iapp-end-modal-wrap"></div>\n\n';
 
 }
 return __p
@@ -18,7 +18,7 @@ var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 with (obj) {
 __p += '      <div class="card card-detail">\n      \n\n        ';
- if (content.brightcove_id) { ;
+ if (content.brightcove_id !== "") { ;
 __p += '\n        \n        <!-- Start of Brightcove Player -->\n\n        <div style="display:none">\n        Interactives video player with single clip \n        </div>\n\n\n        <object id="myExperience' +
 ((__t = (content.brightcove_id)) == null ? '' : __t) +
 '" class="BrightcoveExperience">\n          <param name="bgcolor" value="#FFFFFF" />\n          <param name="width" value="' +
@@ -28,14 +28,20 @@ __p += '\n        \n        <!-- Start of Brightcove Player -->\n\n        <div 
 '" />\n          <param name="playerID" value="4191673832001" />\n          <param name="playerKey" value="AQ~~,AAAABvaL8JE~,ufBHq_I6Fnz1-5Tv-uC_zxqKqCr-Phqa" />\n          <param name="isSlim" value="true" />\n          <param name="dynamicStreaming" value="true" />\n            \n          <param name="@videoPlayer" value="' +
 ((__t = (content.brightcove_id)) == null ? '' : __t) +
 '" />\n          <param name="wmode" value="opaque" />\n          <param name="autoStart" value="false" />\n        </object>\n\n\n        <!-- End of Brightcove Player -->\n        ';
+ } else {;
+__p += '\n            <div class="iapp-detail-quote-wrap">\n                <h3 class="iapp-detail-quote">' +
+((__t = (content.tribute_text )) == null ? '' : __t) +
+'</h3> \n            </div>\n        ';
  } ;
-__p += '\n      \n        <div class="close-card"></div>\n      \n      \n      \n        <div class="iapp-detail-info">\n            <h2 class="card-back-header">' +
+__p += '\n        <div class="close-card"></div>\n      \n      \n      \n        <div class="iapp-detail-info">\n            <h2 class="card-back-header">' +
 ((__t = ( content.person_name )) == null ? '' : __t) +
-' </h2>\n            <p class="iapp-summary">' +
-((__t = ( content.photo_caption )) == null ? '' : __t) +
-'</p>\n            <p class="iapp-card-back-photo-credit">' +
-((__t = (content.photo_credit)) == null ? '' : __t) +
-'</p>\n        </div>\n      \n      \n      </div>\n      \n        <div class="iapp-detail-bg"></div> \n\n';
+' </h2>\n            ';
+ if (content.video_credit !== "") { ;
+__p += '\n                <p class="iapp-summary">' +
+((__t = ( content.video_credit )) == null ? '' : __t) +
+'</p>\n            ';
+ } ;
+__p += '\n        </div>\n      \n      \n      </div>\n      \n        <div class="iapp-detail-bg"></div> \n\n';
 
 }
 return __p
@@ -52,7 +58,7 @@ __p += '<div class="iapp-card-front-image-wrap">\n    <img class="cover-img" src
 '">\n</div>\n<div class="iapp-card-info">\n    <h2 class="iapp-card-info-header">' +
 ((__t = ( person_name)) == null ? '' : __t) +
 '</h2>\n    <p class="iapp-card-info-text">' +
-((__t = ( photo_caption)) == null ? '' : __t) +
+((__t = ( bio )) == null ? '' : __t) +
 '</p>\n    <p class="iapp-card-info-photo-credit">' +
 ((__t = ( photo_credit)) == null ? '' : __t) +
 '</p>\n    \n</div>\n';

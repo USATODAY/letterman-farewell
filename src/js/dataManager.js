@@ -25,18 +25,12 @@ define(
             var _this = this;
             jQuery.getJSON(dataURL, function(data) {        
                 _this.data.dresses = data;
-                _this.organizeTags();
-                
-                
-
-                
 
                 _.each(_this.data.dresses, function(dataObj) {
                     
 
-                    dataObj.brightcove_id = "4206290024001";
-
-                    dataObj.photo_url = _this.base_url + dataObj.photo_filename + '.jpg';
+                    dataObj.tribute_text = _this.smartQuotify(dataObj.tribute_text);
+                    dataObj.photo_url = _this.base_url + dataObj.photo_filename;
                 });
 
                 
@@ -94,7 +88,14 @@ define(
             this.data.tags = uniqueTags;
         },
         userName: '',
-        base_url: 'http://www.gannett-cdn.com/experiments/usatoday/2015/02/red-carpet/img/'
+        base_url: 'http://www.gannett-cdn.com/experiments/usatoday/2015/05/letterman/img/',
+        smartQuotify: function(a) {
+            a = a.replace(/(^|[-\u2014\s(\["])'/g, "$1\u2018");       // opening singles
+            a = a.replace(/'/g, "\u2019");                            // closing singles & apostrophes
+            a = a.replace(/(^|[-\u2014/\[(\u2018\s])"/g, "$1\u201c"); // opening doubles
+            a = a.replace(/"/g, "\u201d");                            // closing doubles
+            return a;
+        }
     };
 
 
