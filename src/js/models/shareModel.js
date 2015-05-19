@@ -9,8 +9,8 @@ define(
 
     return Backbone.Model.extend( {
         defaults: {
-            'default_share_language': 'Love it or leave it? I shopped USA TODAY\'s Ultimate Oscar Closet​:',
-            'stillimage': 'http://www.gannett-cdn.com/experiments/usatoday/2015/02/red-carpet/img/fb-post.jpg',
+            'default_share_language': 'And now, from the home office in Wahoo, Neb., David Letterman says: See ya later',
+            'stillimage': 'http://www.gannett-cdn.com/experiments/usatoday/2015/05/letterman/img/fb-post.jpg',
             'likePath': '',
             'dislikePath': '',
             'endHeader': 'You\'re done!',

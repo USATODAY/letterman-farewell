@@ -1,7 +1,6 @@
 .iapp-page-wrap {
   margin: 0 auto;
   overflow-x: hidden;
-  padding: 2%;
   position: relative;
   width: 100%;
   @extend .group;
@@ -94,7 +93,8 @@
 
 .iapp-card-wrap-full-width {
   float: none;
-  width: 100%;
+  margin: 0 auto;
+  width: calc(100% - 4em);
 }
 
 
@@ -121,4 +121,10 @@
   font-family: "Futura Today DemiBold", Arial, sans-serif;
   font-size: 1.5em;
   margin: 1em 0;
+}
+
+.iapp-head-wrap {
+    background: url(http://www.gannett-cdn.com/experiments/usatoday/2015/05/letterman/img/lights-topper.png) repeat-x;
+    background-size: 1200px;
+    padding: 150px 2em 2em 2em;
 }
