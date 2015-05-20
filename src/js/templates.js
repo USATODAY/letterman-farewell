@@ -6,7 +6,15 @@ this["templates"]["app-view.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '    <div class="iapp-head-wrap">\n        <h1 class="iapp-page-header">And now, from the home office in Wahoo, Neb., David Letterman says: See ya later</h1>\n        <p class="iapp-page-chatter">During his 33 years as a late-night host, the weatherman from Indianapolis has shot the breeze with Bill Murray, Barack Obama and Bruce Willis. Here\'s how his guests, and in some cases friends, remember him.</p>\n\n        <p class="iapp-share-chatter">Your friend\'s choices are below. Press reset to select your favorites.</p>\n        <div class="iapp-share-wrap"></div>\n    </div>\n<div class="iapp-menu"></div>\n<div id="card-wrap" class="iapp-card-wrap"></div>\n\n<div class="iapp-intro-wrap">\n    <div class="iapp-intro-content-wrap">\n        <div class="iapp-intro-icon-wrap">\n        </div> <!-- end iapp-intro-icon-wrap -->\n        <div class="iapp-intro-info">\n            <h2 class="iapp-intro-header">And now, from the home office in Wahoo, Neb., David Letterman says: See ya later</h2>\n            <p class="iapp-intro-chatter">During his 33 years as a late-night host, the weatherman from Indianapolis has shot the breeze with Bill Murray, Barack Obama and Bruce Willis. Here\'s how his guests, and in some cases friends, remember him.</p>\n            <div class="iapp-button iapp-begin-button iapp-clickable"><div class="iapp-button-text">Begin</div></div>\n        </div> <!-- end iapp-intro-info -->\n    </div> <!-- end iapp-intro-content-wrap -->\n</div> <!-- end iapp-intro-wrap -->\n\n<div class="iapp-end-modal-wrap"></div>\n\n';
+__p += '    <div class="iapp-head-wrap">\n        <h1 class="iapp-page-header">' +
+((__t = ( head )) == null ? '' : __t) +
+'</h1>\n        <p class="iapp-page-chatter">During his 33 years as a late-night host, the weatherman from Indianapolis has shot the breeze with Bill Murray, Barack Obama and Bruce Willis. Here\'s how his guests, and in some cases friends, remember him.</p>\n\n        <p class="iapp-share-chatter">' +
+((__t = ( chatter )) == null ? '' : __t) +
+'</p>\n        <div class="iapp-share-wrap"></div>\n    </div>\n<div class="iapp-menu"></div>\n<div id="card-wrap" class="iapp-card-wrap"></div>\n\n<div class="iapp-intro-wrap">\n    <div class="iapp-intro-content-wrap">\n        <div class="iapp-intro-icon-wrap">\n        </div> <!-- end iapp-intro-icon-wrap -->\n        <div class="iapp-intro-info">\n            <h2 class="iapp-intro-header">' +
+((__t = ( head )) == null ? '' : __t) +
+'</h2>\n            <p class="iapp-intro-chatter">' +
+((__t = ( chatter )) == null ? '' : __t) +
+'</p>\n            <div class="iapp-button iapp-begin-button iapp-clickable"><div class="iapp-button-text">Begin</div></div>\n        </div> <!-- end iapp-intro-info -->\n    </div> <!-- end iapp-intro-content-wrap -->\n</div> <!-- end iapp-intro-wrap -->\n\n<div class="iapp-end-modal-wrap"></div>\n\n';
 
 }
 return __p

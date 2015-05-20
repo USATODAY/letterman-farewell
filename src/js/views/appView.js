@@ -40,7 +40,7 @@ define([
     template: templates["app-view.html"], 
 
     render: function() {
-      this.$el.html(this.template({}));
+      this.$el.html(this.template({head: config.head, chatter: config.chatter}));
       
     },
 
